@@ -15,21 +15,21 @@ export const JobSchema = new Schema(
       type: Number,
       required: true,
     },
-    rate: {
-      type: Number,
-      required: true,
-    },
-    description: {
-      type: String,
+      rate: {
+        type: Number,
+        required: true,
+      },
+      description: {
+        type: String,
+      },
+
+      sellerId: { type: ObjectId, required: true, ref: 'Account' },
     },
 
-    sellerId: { type: ObjectId, required: true, ref: 'Account' },
-  },
-
-  {
-    timestamps: true,
-    toJSON: {
-      virtuals: true,
+    {
+      timestamps: true,
+      toJSON: {
+        virtuals: true,
     },
   }
 );
