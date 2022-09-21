@@ -8,6 +8,7 @@ class CarsService {
       throw new BadRequest('Invalid Car Id');
     }
     if (userInfo.id != car.sellerId.toString()) {
+      throw new Forbidden("NOT YOURS TO DELETE")
     }
     car.delete()
 
@@ -37,7 +38,7 @@ class CarsService {
   async editCar(carData, userInfo, carId) {
     const car = await this.getCarById(carData.id || carId);
     //REVIEW car.id is an object id comparison on id, when pulling something from the database
-    if (userInfo.id != car.sellerId) {
+    if (userInfo.id != car.sellerId.toString()) {
       throw new Forbidden('Thats Not Your Car... Go away.. please');
     }
     car.make = carData.make || car.make;

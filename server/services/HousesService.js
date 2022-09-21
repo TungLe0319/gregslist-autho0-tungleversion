@@ -26,7 +26,7 @@ async createHouse(formData){
 
 async editHouse(houseData, userInfo, houseId){
   const house = await this.getHouseById(houseData.id || houseId)
-  if (userInfo.id != house.id.toString()) {
+  if (userInfo.id != house.sellerId.toString()) {
     throw new Forbidden('Thats Not Your House... Go Away')
   }
   if (!houseId) {
@@ -39,6 +39,8 @@ async editHouse(houseData, userInfo, houseId){
   house.price = houseData.price || house.price
   house.description = houseData.description || house.description
   house.imgUrl = houseData.imgUrl || house.imgUrl
+  await house.save()
+  return house
 }
 
 async deleteHouse(houseId){
