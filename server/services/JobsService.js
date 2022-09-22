@@ -40,9 +40,13 @@ const job = await this.getById(jobId)
 if (!job) {
   throw new BadRequest(' Invalid House Id')
 }
+//creatorId.toString() because it's an objectId..
+//Asking if the client/user who's asking to delete or edit has an  Id that  matches to the Id of the one who made the original post/request.
+//you aren't allowed to post/edit/delete if you weren't the one we made it.
 if (userInfo.id != job.sellerId.toString()) {
   throw new Forbidden("NOT YOURS TO DELETE")
 }
+
 job.delete()
 }
 
