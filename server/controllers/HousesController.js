@@ -9,7 +9,7 @@ export class HousesController extends BaseController {
     super('/api/houses');
     this.router
       .get('', this.getHouses)
-
+//hi
       .get('/:houseId', this.getHouseById)
       //CHECKPOINT/MIDDLEWARE REVIEW THE KNIGHT
       .use(Auth0Provider.getAuthorizedUserInfo)
