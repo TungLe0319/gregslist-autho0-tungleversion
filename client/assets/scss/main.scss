@@ -16,4 +16,46 @@ main {
 }
 
 
+.polaroid{
+  filter: sepia(80%);
+}
+
+.polaroid:hover{
+  filter: sepia(0%);
+  transition: all 0.3s ease-in-out;
+
+}
+
+.card:hover{
+    transform: scale(1.02);
+  transition: all 0.3s ease-out;
+}
+
+
+.verybigmodal{
+  max-width: 90%;
+}
+
+.scrollable-y{
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.headerbg{
+ height: 20vh1;
+    
+    /* always scale the image to the appropriate size of your screen */
+    background-size: contain;
+    background-image: url(https://wallpapercave.com/wp/wp3396934.jpg);
+    background-position: center;
+    /* keeps the image fixed while scrolling , neat effect. */
+    background-attachment: fixed; 
+  
+}
+
+.sticky-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+}
 

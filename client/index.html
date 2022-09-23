@@ -37,22 +37,51 @@
   <main id="app">
     <div class="container-fluid">
       <div class="row my-3">
-        <div class="col-lg-5" id="auth-settings">
-          <div class="card p-2 skeleton-loader">
-            <div class="card-title p-2">
-              <div class="d-flex align-items-center">
-                <div class="skeleton-loader avatar"></div>
-                <div class="skeleton-loader text mx-2"></div>
+     <div class="card elevation-3 mx-4 my-2" style="width: 17.5rem">
+              <div class="d-flex justify-content-center">
+                <img
+                  src="https://d2ph5fj80uercy.cloudfront.net/04/cat3676.jpg"
+                  alt=""
+                  class="img-fluid rounded mt-2 elevation-4 polaroid"
+                />
+              </div>
+              <div class="card-body">
+                <div class="border-bottom border-dark border-3">
+                  <span> <i class="mdi mdi-comment fs-2 selectable"  data-bs-toggle="modal"
+              data-bs-target="#postModal"></i></span>
+                  <span class="mx-3">
+                    <i class="mdi mdi-arrow-up-box fs-2 selectable"></i>14</span
+                  >
+                  <span>
+                    <i class="mdi mdi-arrow-down-box fs-2 selectable"></i
+                    >5</span
+                  >
+                </div>
+                <div class="d-flex justify-content-end text-shadow mt-2">
+                  <h6>PlaceHolder Text</h6>
+                </div>
               </div>
             </div>
-            <div class="card-body border-top">
-              <div class="skeleton-loader text block"></div>
-              <div class="skeleton-loader text block"></div>
-              <div class="skeleton-loader text block"></div>
-            </div>
+
+
+
+      </div>
+        <div class="row mt-5">
+          <div class="col-md-2">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn bg-primary text-light rounded-circle sticky-btn"
+              data-bs-toggle="modal"
+              data-bs-target="#postFormModal"
+            >
+              <i class="mdi mdi-foot-print fs-1"></i>
+            </button>
+            <!-- --------- -->
+           
+            <!-- --- -->
           </div>
         </div>
-      </div>
     </div>
 
   </main>
@@ -63,6 +92,115 @@
       </div>
     </div>
   </footer>
+
+  <!-- ------------------------------------------------ -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade modal-dar"
+      id="postModal"
+      tabindex="-1"
+      aria-labelledby="postModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog  modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-body p-2">
+            <div class="">
+              <div class="row">
+                <div class="col-md-6" >
+                  <img
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fnypost.com%2Fwp-content%2Fuploads%2Fsites%2F2%2F2018%2F05%2Fshutterstock_703428457.jpg%3Fquality%3D90%26strip%3Dall&f=1&nofb=1"
+                    alt=""
+                    class="rounded polaroid img-fluid"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div class=" justify-content-between d-flex ">
+                    <i class="mdi mdi-human fs-6"></i>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <span>
+                        <i class="mdi mdi-plus-box fs-5 selectable"></i
+                      ></span>
+                    </div>
+                    <div>
+                      <span>
+                        <i class="mdi mdi-arrow-up-box fs-5 selectable"></i>
+                        <small>14</small></span
+                      >
+                      <span>
+                        <i class="mdi mdi-arrow-down-box fs-5 selectable"></i
+                        ><small>5</small></span
+                      >
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <div class="card mb-5 mt-2 mx-2 p-2  scrollable-y">
+                     
+                    
+                  
+                     <div class="border border-dark d-flex mb-3">
+<span class="ms-2"><i class="mdi mdi-human fs-3"></i></span>
+<div class="p-2"><h5> Cryptoid9000 says:</h5> 
+<small>I saw this thing in the middle of the night when i was taking out the trash! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt quis error laudantium, officiis labore aut debitis ducimus maxime, molestiae qui iure, ea quaerat nulla repudiandae quia reiciendis libero facere.</small></div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- ------------------------------------------------ -->
+
+  
+  <!-- ------------------------------------------------ -->
+<!-- Modal -->
+<div class="modal fade" id="postFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <form onsubmit="">
+        <div class="form-floating mb-3">
+  <input type="url" class="form-control" id="imgUrl" name="imgUrl"  placeholder="ImgUrl">
+  <label for="imgUrl">ImgUrl</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="name" id="name" placeholder="name">
+  <label for="name">Password</label>
+</div>
+<div class="form-floating">
+  <input type="text" class="form-control" id="location" name="location" placeholder="location">
+  <label for="location">Location</label>
+</div>
+       </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- ------------------------------------------------ -->
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
